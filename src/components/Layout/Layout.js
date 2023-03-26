@@ -1,6 +1,3 @@
-// import { Suspense } from 'react';
-// import { ToastContainer } from 'react-toastify';
-// import { Div, Main, Footer } from './MenuLayout.styled';
 import { Box, Container, Typography } from '@mui/material';
 import { AuthMenu } from 'components/AuthMenu/AuthMenu';
 import { UserMenu } from 'components/UserMenu/UserMenu';
@@ -14,23 +11,27 @@ const Layout = () => {
     <>
       <Box sx={{ backgroundColor: 'primary.main' }}>
         <Container maxWidth="lg">
-        <Box sx={{ p: 1 }}>
-          {isLogin ? <UserMenu /> : <AuthMenu />}
-          </Box>
-          </Container>
+          <Box sx={{ p: 1 }}>{isLogin ? <UserMenu /> : <AuthMenu />}</Box>
+        </Container>
       </Box>
       <main>
-      <Container maxWidth="lg">
-        <Outlet />
+        <Container maxWidth="lg">
+          <Outlet />
         </Container>
       </main>
       <footer>
         <Box sx={{ backgroundColor: 'primary.main' }}>
           <Container maxWidth="lg">
             <Box sx={{ p: 2 }}>
-            <Typography level="body1" fontSize="xl" textAlign={'center'} sx={{color:'primary.contrastText'}}>
-              Copyright © 2023
-            </Typography></Box>
+              <Typography
+                level="body1"
+                fontSize="xl"
+                textAlign={'center'}
+                sx={{ color: 'primary.contrastText' }}
+              >
+                Copyright © 2023
+              </Typography>
+            </Box>
           </Container>
         </Box>
       </footer>

@@ -10,7 +10,7 @@ export const AuthMenu = () => {
           justifyContent: 'space-between',
           alignItems: 'center',
           color: 'primary.contrastText',
-          padding:'15px'
+          padding: '15px',
         }}
       >
         <Box>

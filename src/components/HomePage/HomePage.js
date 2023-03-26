@@ -11,7 +11,7 @@ export const HomePage = () => {
           variant="h2"
           sx={{ textAlign: 'center', color: 'primary.main' }}
         >
-         Phonebook{' '}
+          Phonebook
         </Typography>
         <img
           alt="PhoneBook"

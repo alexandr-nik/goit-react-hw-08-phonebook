@@ -1,7 +1,12 @@
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { deleteContact, fetchContacts } from 'redux/contacts/operations';
-import { getContacts, getError, getFilter, getIsLoading } from 'redux/contacts/selector';
+import {
+  getContacts,
+  getError,
+  getFilter,
+  getIsLoading,
+} from 'redux/contacts/selector';
 import { Spinner } from 'components/Spinner/Spinner';
 import {
   ContactsBlock,

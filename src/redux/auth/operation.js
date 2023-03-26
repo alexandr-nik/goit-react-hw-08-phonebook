@@ -29,7 +29,7 @@ export const singIn = createAsyncThunk(
   'auth/singin',
   async (user, thunkAPI) => {
     try {
-      const response = await axios.post('/users/login', user);  
+      const response = await axios.post('/users/login', user);
       setAuthHeader(response.data.token);
       return response.data;
     } catch (error) {
@@ -38,26 +38,23 @@ export const singIn = createAsyncThunk(
   }
 );
 
-export const singOut = createAsyncThunk(
-  'auth/singOut',
-  async (_, thunkAPI) => {
-      try {
-      await axios.post('/users/logout');
-      clearAuthHeader();
-    } catch (error) {
-      return thunkAPI.rejectWithValue(error.message);
-    }
+export const singOut = createAsyncThunk('auth/singOut', async (_, thunkAPI) => {
+  try {
+    await axios.post('/users/logout');
+    clearAuthHeader();
+  } catch (error) {
+    return thunkAPI.rejectWithValue(error.message);
   }
-);
+});
 
 export const refreshUser = createAsyncThunk(
   'auth/refresh',
   async (_, thunkAPI) => {
-     const state = thunkAPI.getState();
+    const state = thunkAPI.getState();
     const persistedToken = state.auth.token;
     if (persistedToken === null) {
-     return thunkAPI.rejectWithValue('Unable to fetch user');
+      return thunkAPI.rejectWithValue('Unable to fetch user');
     }
-    setAuthHeader(persistedToken);   
+    setAuthHeader(persistedToken);
   }
 );

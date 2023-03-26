@@ -12,7 +12,7 @@ import {
   PhonebookButton,
 } from './ContactForm.styled';
 
-const notify = (message) => toast(message);
+const notify = message => toast(message);
 
 export const ContactForm = () => {
   const contacts = useSelector(getContacts);
@@ -72,7 +72,7 @@ export const ContactForm = () => {
         </PhonebookLable>
         <PhonebookButton type="submit">Add contact</PhonebookButton>
       </PhonebookForm>
-      <Toaster/>
+      <Toaster />
     </Phonebook>
   );
 };
