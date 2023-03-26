@@ -16,7 +16,6 @@ export const singUp = createAsyncThunk(
     try {
       console.log(user);
       const response = await axios.post('/users/signup', user);
-      console.log(response);
       setAuthHeader(response.data.token);
       return response.data;
     } catch (error) {

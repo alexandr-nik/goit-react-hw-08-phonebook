@@ -45,7 +45,7 @@ export const UserMenu = () => {
         </NavLink>
       </Box>
       <Box display={'flex'} sx={{ alignItems: 'center', gap: '10px' }}>
-        <Avatar alt={userName} src="../../image/img.png" />
+        <Avatar alt={userName} />
         <Typography sx={{ color: 'primary.contrastText' }}>
           Welcome, {userName}
         </Typography>

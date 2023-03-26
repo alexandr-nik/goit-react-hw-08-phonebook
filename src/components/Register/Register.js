@@ -13,7 +13,6 @@ export const Register = () => {
   const handleSubmit = e => {
     e.preventDefault();
     if (name.trim() && email.trim() && password.trim()) {
-      console.log({ name, email, password });
       dispatch(singUp({ name, email, password }));
       setName('');
       setEmail('');
